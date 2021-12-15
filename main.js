@@ -1,7 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
-            cart: 0,
+            cart: [],
             product : 'socks',
             brand: 'My super Brand',
             selectedVariant: 0,
@@ -12,7 +12,11 @@ const app = Vue.createApp({
              ]
          }
     },
-    methods:{}
+    methods:{
+        updateCart(id){
+            this.cart.push(id);
+        }
+    }
 
 
 })
